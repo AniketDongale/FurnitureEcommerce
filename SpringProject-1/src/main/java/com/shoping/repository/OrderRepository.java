@@ -1,12 +1,11 @@
 package com.shoping.repository;
 
 
-import com.shoping.Entity.Product;
+import com.shoping.Entity.Orders;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface  ProductRepository extends JpaRepository<Product,Integer> {
-
+public interface  OrderRepository extends JpaRepository<Orders,Integer> {
 }

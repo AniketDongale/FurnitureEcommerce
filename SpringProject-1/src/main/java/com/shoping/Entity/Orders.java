@@ -1,13 +1,11 @@
 package com.shoping.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
