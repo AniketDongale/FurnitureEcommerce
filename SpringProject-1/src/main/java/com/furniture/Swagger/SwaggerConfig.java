@@ -50,7 +50,7 @@ public class SwaggerConfig {
                 .version("1.1.0")
                 .license("Apache 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("Revanth Kariappa", "https://github.com/REVANTH-KARIAPPA", "revanthkariappa4@gmail.com"))
+                .contact(new Contact("Aniket Dongale", "https://github.com/aniketdongale", "aniket-uttam.dongale@capgemini.com"))
                 .build();
     }
     private SecurityContext securityContext() {
