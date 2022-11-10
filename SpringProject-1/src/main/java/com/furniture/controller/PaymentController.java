@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("payment")
-@CrossOrigin(origins = "*", maxAge = 3006)
+@CrossOrigin
 public class PaymentController {
 
     @Autowired

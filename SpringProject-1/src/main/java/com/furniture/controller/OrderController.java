@@ -13,7 +13,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/order")
-@CrossOrigin(origins = "*", maxAge = 3006)
+@CrossOrigin
 public class OrderController {
 
     @Autowired

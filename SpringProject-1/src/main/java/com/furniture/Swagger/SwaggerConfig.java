@@ -64,5 +64,5 @@ public class SwaggerConfig {
         return Arrays.asList(new SecurityReference("JWT", authorizationScopes));
     }
     //for Swagger api doc generation
-    //http://localhost:8091/v2/api-docs
+    //http://localhost:8090/v2/api-docs
 }
