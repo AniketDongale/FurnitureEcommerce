@@ -13,7 +13,7 @@ public class Orders {
     private int orderTotal;
     private boolean status=false;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL})
     private Payment payment;
 
     @ManyToMany

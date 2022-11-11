@@ -15,7 +15,7 @@ public class  Product {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer productId;
     private String productName;
-    private Integer prize;
+    public Integer prize;
     private String img;
 
     @JsonIgnore

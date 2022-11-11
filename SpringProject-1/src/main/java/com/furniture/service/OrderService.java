@@ -55,7 +55,8 @@ public class  OrderService {
     }
 
     public List<Orders> getOrderByUserId(long id) {
-        User user = userRepository.findById(id).get();
+        User user = userRepository.getReferenceById(id);
+        
         List <Orders> orders = user.getOrders();
 
 
@@ -66,7 +67,7 @@ public class  OrderService {
 
         Optional<Orders> orders= orderRepository.findById(oId);
         if(orders.isPresent()){
-            Orders o=orderRepository.findById(oId).get();
+            Orders o =orderRepository.getReferenceById(oId);
             return o;
         }
         else {

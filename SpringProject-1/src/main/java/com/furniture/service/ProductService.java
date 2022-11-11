@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -75,20 +76,29 @@ public class ProductService {
     public void addOrderProduct(Long userId, Set<Product> products) {
 
         Optional<User> user= userRepository.findById(userId);
+        System.out.println(user.isPresent());
         if(user.isPresent()){
+            
 
             User myUser=userRepository.findById(userId).get();
             Orders orders=new Orders();
             Payment payment=new Payment();
-            paymentRepository.save(payment);
+            payment.setEmail(myUser.getEmail());
+            float sum = 0f;
+            Iterator<Product>totam = products.iterator();
+            while(totam.hasNext()) {
+            	sum = sum + totam.next().prize;
+            }
+            payment.setPaymentAmount(sum);
             orders.setUsers(myUser);
             orders.setProducts(products);
-            orders.setPayment(payment);
+            orders.setPayment(payment); 
+            paymentRepository.save(payment);
             orderRepository.save(orders);
-
+            
             myUser.addOrders(orders);
             userRepository.save(myUser);
-            paymentRepository.save(payment);
+           
 
 
 
