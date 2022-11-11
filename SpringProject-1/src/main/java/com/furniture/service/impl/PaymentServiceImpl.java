@@ -62,7 +62,7 @@ public class PaymentServiceImpl implements PaymentService {
 	@Override
 	public Payment getPaymentById(Integer paymentId) throws PaymentNotFoundException {
 		Optional<Payment> paymentOpt = this.paymentRepo.findById(paymentId);
-		if (paymentOpt.isEmpty())
+		if (!paymentOpt.isPresent())
 			throw new PaymentNotFoundException("Id Not Found");
 
 		return paymentOpt.get();
