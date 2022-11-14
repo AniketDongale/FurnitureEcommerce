@@ -1,10 +1,11 @@
-package com.furniture.service.impl;
+package service.impl;
 
 import com.furniture.Repository.UserRepository;
-import com.furniture.exception.UserNotFoundException;
-import com.furniture.model.Product;
+
 import com.furniture.model.User;
 import com.furniture.model.UserDto;
+import com.furniture.service.impl.UserServiceImpl;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,15 +14,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
-import org.mockito.junit.jupiter.MockitoExtension;
-import static org.mockito.ArgumentMatchers.any;
 
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)

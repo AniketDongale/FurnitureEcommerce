@@ -28,6 +28,13 @@ public class UserDto {
 		this.phone = phone;
 		this.name = name;
 	}
+    public UserDto( String username, String password, String email) {
+		super();
+		
+		this.username = username;
+		this.password = password;
+		this.email = email;
+	}
 
 	public String getUsername() {
         return username;
