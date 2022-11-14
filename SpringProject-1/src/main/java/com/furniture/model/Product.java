@@ -36,6 +36,12 @@ public class  Product {
    
     
 
+	public Product() {
+		super();
+	}
+
+
+
 	public Product(Integer productId, String productName, Integer prize, String img, Boolean approved) {
 		super();
 		this.productId = productId;

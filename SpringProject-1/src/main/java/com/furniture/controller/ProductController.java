@@ -24,6 +24,7 @@ public class ProductController {
 
         return productService.getAllProducts();
     }
+    
     @GetMapping("/{pid}")
     public ResponseEntity<Product> getProduct(@PathVariable Integer pid)
     {
