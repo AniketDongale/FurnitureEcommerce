@@ -16,8 +16,12 @@ public class UserDto {
     private String phone;
     private String name;
     
+    
 
-    public UserDto(
+    public UserDto() {
+		super();
+	}
+	public UserDto(
 			@Pattern(regexp = "^[A-Za-z]*$", message = "only alphabets") @NotBlank(message = "username can not be Blank") @NotNull(message = "username can not be null") @Size(max = 10, message = "username max 10 letters") String username,
 			@Size(min = 4, message = "password should be more then 4 letters") String password,
 			@Email(message = "Please provide a valid email address") String email, String phone, String name) {
